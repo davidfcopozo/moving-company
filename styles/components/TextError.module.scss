@@ -1,0 +1,5 @@
+@use '../abstract/Index.module.scss' as *;
+
+.textError {
+  @include font(unset, $footprintFont, red);
+}

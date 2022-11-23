@@ -1,0 +1,47 @@
+@use '../abstract/Index.module.scss' as *;
+
+    .cardHeading {
+      width: 100%;
+      text-align: left;
+      font-weight: 700;
+      line-height: 1.222;
+      margin-top: 15vh;
+      margin-bottom: 1em;
+      
+      & h2 {
+        @include font(inherit, $xlSize, $darkBlueFont);
+      }
+
+      .footprint {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1em;
+        margin-top: 1em;
+
+        /* div:first-of-type {
+          a {
+            text-decoration: none;
+            list-style: none;
+            @include font(inherit, $navFont, #000000);
+          }
+        } */
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 3em;
+          height: 3em;
+          border-radius: 50%;
+          border: solid 1px $lightGrayBg;
+          
+
+          @include laptop {
+            width: 2em;
+            height: 2em;
+          }
+        }
+      }
+    }

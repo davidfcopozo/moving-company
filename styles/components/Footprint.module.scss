@@ -1,0 +1,35 @@
+ @use '../abstract/Index.module.scss' as *;
+ 
+ .footprint {
+   width: 100%;
+   padding-top: 1em;
+   border-top: 1px solid rgb(231, 232, 234, 0.25);
+   color: $lightGrayBg;
+   background: $footerBg;
+
+   @include laptop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    grid-row: 2;
+    grid-area: 2 / 1 / 2 / 4;
+
+    p:nth-of-type(2) {
+      margin-top: 2em;
+      @include font($sansSerif, $footprintFont, $whiteFont);
+      padding-bottom: 1em;
+      
+    }
+  }
+  
+  p {
+    @include font($fugazOne, $footprintFont, $whiteFont);
+    padding-bottom: 1em;
+     text-align: center;
+     
+     a {
+       @include font($fugazOne, $footprintFont, $orangeBg);
+     }
+   }
+ }

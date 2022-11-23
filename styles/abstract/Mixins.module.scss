@@ -1,0 +1,12 @@
+@mixin button($width, $bgColor, $fontColor, $fontSize) {
+  width: $width;
+  background-color: $bgColor;
+  font-size: $fontSize;
+  color: $fontColor;
+}
+
+@mixin font($family, $size, $color) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+}

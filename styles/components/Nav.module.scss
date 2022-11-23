@@ -1,0 +1,99 @@
+@use '../abstract/Index.module.scss' as *;
+
+
+.navContainer {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  top: 0;
+
+  @include laptop {
+      position: absolute;
+      height: 0;
+      top: 70%;
+      width: unset;
+      margin-right: -15vw;
+      display: inherit !important;
+    }
+    
+    @include customBreakpoint(1000px) {
+      margin-right: -25vw;
+    }
+    
+    @include large {
+      margin-right: -30vw;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    
+    @include laptop {
+      position: relative;
+      flex-direction: row;
+      @include font(inherit, $navFont, $whiteFont);
+      background-color: hsla(227deg, 86%, 45%, 0.9);
+      height: unset;
+      width: unset;
+      list-style-type: none;
+      text-decoration: none;
+    }
+
+    li {
+      padding-inline: 1rem;
+      margin-block: 2em;
+      
+      @include laptop {
+        padding-block: unset;
+        margin-block: unset;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(227, 86%, 45%, 90%);
+    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 80vw;
+
+    a{
+      @include font(inherit, $biggerNavFont, $whiteFont);
+      list-style-type: none;
+      text-decoration: none;
+
+      @include laptop {
+          @include font(inherit, $navFont, $whiteFont);
+        }
+    }
+    
+    @include laptop {
+      justify-content: end;
+      position: relative;
+      height: unset;
+      background-color: transparent;
+      width: 100%;
+      right: unset;
+      bottom: unset;
+    }
+  }
+}
+
+.navActive {
+  display: flex;
+}

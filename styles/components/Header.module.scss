@@ -1,0 +1,74 @@
+@use '../abstract/Index.module.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+.header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-inline: auto;
+  font-family: $fugazOne;
+  background-color: $blueBg;
+  z-index: 100000;
+  
+  
+  div:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $lightGrayBg;
+    padding-block: 0.3em;
+
+    a {
+      text-decoration: none;
+      color: $darkBlueFont;
+    }
+  }
+  
+  div:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+    align-items: center;
+    height: 5vh;
+    width: 90%;
+
+    @include tablet {
+      height: 8vh;
+    }
+    
+    div:nth-of-type(1) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: transparent;
+      
+      @include tablet {
+          gap: 1rem;
+        }
+    }
+    
+    button:nth-of-type(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      width: fit-content;
+      height: fit-content;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      cursor: pointer;
+      text-align: center;
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+}

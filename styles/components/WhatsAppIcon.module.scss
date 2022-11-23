@@ -1,0 +1,29 @@
+@use '../abstract/Index.module.scss' as *;
+
+.iconContainer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  cursor: pointer;
+  border: 0;
+  width: 1em;
+  height: 1em;
+  padding: 1.8em;
+  border-radius: 50%;
+  transition: opacity 250ms ease;
+  background: transparent;
+  outline: none;
+  right: 5%;
+  bottom: 2%;
+  margin-bottom: 0.5em;
+  background-color: $green;
+  
+  @include laptop {
+    width: 2em;
+    height: 2em;
+    padding: 2em;
+
+  }
+}

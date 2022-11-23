@@ -1,0 +1,25 @@
+@use '../abstract/Index.module.scss' as *;
+
+.btn {
+  display: inline;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  @include button(100px, $orangeBg, $whiteFont, .7rem);
+  height: fit-content;
+  padding: 0.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  
+}

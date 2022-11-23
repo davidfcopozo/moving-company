@@ -1,0 +1,11 @@
+@use '../abstract/Index.module.scss' as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin-top: 15vh;
+  width: 80%;
+}

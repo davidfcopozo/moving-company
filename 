@@ -1,0 +1,13 @@
+[1mdiff --git a/components/Header.js b/components/Header.js[m
+[1mindex cc696fa..01eca56 100644[m
+[1m--- a/components/Header.js[m
+[1m+++ b/components/Header.js[m
+[36m@@ -66,7 +66,7 @@[m [mconst Header = () => {[m
+       <header className={headerStyles.header}>[m
+         <div>[m
+           <a href="tel:+34664067981">[m
+[31m-            <FontAwesomeIcon icon={faPhone} /> 664 067 981[m
+[32m+[m[32m            <FontAwesomeIcon icon={faPhone} /> Llámanos: 664 067 981[m
+           </a>[m
+         </div>[m
+ [m

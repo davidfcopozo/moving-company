@@ -1,0 +1,13 @@
+[1mdiff --git a/components/Footprint.js b/components/Footprint.js[m
+[1mindex 7896791..0fecbb0 100644[m
+[1m--- a/components/Footprint.js[m
+[1m+++ b/components/Footprint.js[m
+[36m@@ -17,7 +17,7 @@[m [mconst Footprint = () => {[m
+       <p>[m
+         <small>[m
+           &copy;Copyright {year} Juank Transportes Ligeros, todos los derechos[m
+[31m-          reservados[m
+[32m+[m[32m          reservados.[m
+         </small>{" "}[m
+       </p>[m
+     </div>[m

@@ -1,0 +1,52 @@
+@use '../abstract/Index.module.scss' as *;
+
+.formContainer {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 8vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  overflow-y: auto;
+  padding: .5rem;
+  padding-bottom: 6.7rem;
+  z-index: 10000;
+  
+  @include laptop {
+    margin-top: 12vh;
+
+  }
+  
+  .closeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    background-color: transparent;
+    @include font(inherit, $mdSize, $grayFont);
+
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid $darkBlueFont;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    right: 10%;
+    top: 3%;
+    z-index: 999;
+    
+    @include laptop {
+      width: 30px;
+      height: 30px;
+      right: 26%;
+    }
+  }
+}
+.isActive {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}

@@ -1,0 +1,99 @@
+@use '../abstract/Index.module.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+.successContainer {
+  display: none;
+  position: fixed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 8vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  overflow-y: auto;
+  padding: .5rem;
+  padding-bottom: 6.7rem;
+  z-index: 10000;
+  overflow-x: hidden;
+  
+  @include laptop {
+    margin-top: 10vh;
+
+  }
+
+  .messageBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    max-width: 425px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: $whiteFont;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(#999, .25);
+    box-shadow: 0 10px 20px 0 rgba(#999, .25);
+    padding: .75rem;
+    @include font($fugazOne, $mdSize, $darkBlueFont);
+    
+    @include tablet {
+      margin-top: 2em;
+    }
+    @include laptop {
+      max-width: 625px;
+      max-height: 70vh;
+      padding-top: unset;
+      padding-bottom: 1em;
+    }
+
+    h2 {
+      @include font(inherit, $mdSize, $darkBlueFont);
+
+    }
+    
+    p {
+      padding-block: 1em;
+      text-align: center;
+      @include font(inherit, $xsSize, $grayFont);
+    }
+    button {
+      border-radius: 10px;
+      @include button(fit-content, inherit, $whiteFont, $xsSize);
+      border: none;
+      padding: .3rem .8rem;
+    }
+
+    .imgContainer {
+      display: grid;
+      display: -ms-grid;
+      align-items: flex-start;
+      height: 100%;
+
+      img {
+          height: 50% !important;
+        }
+      
+      @include mobile {
+          width: 30%;
+        }
+      @include laptop {
+          width: 30%;
+        }
+    }
+  }
+}
+
+.isActive {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}

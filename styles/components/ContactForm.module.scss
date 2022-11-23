@@ -1,0 +1,131 @@
+@use '../abstract/Index.module.scss' as *;
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 10px 20px 0 rgba(#999, .25);
+  margin-bottom: 2em;
+    
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #FFF;
+  height: 100%;
+  
+  .cardImage {
+    display: grid;
+    height: 100% !important;
+    
+    img {
+      box-shadow: inset 190px 1px 75px rgba(0, 0, 0, 0.68);
+      height: 100% !important;
+    }
+    
+      p {
+        display: block;
+        @include font(inherit, $xsSize, $lightGrayBg);
+        font-weight: 400;
+        margin-top: .50em;
+      }
+  }
+
+}
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    font-family: $franklinGothic;
+    border-radius: 10px;
+    position: relative;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    
+    select:invalid {
+      color: $grayFont;
+    }
+  
+    .formControl {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      padding: .8rem;
+    }
+  
+    .inputLabel {
+      @include font(inherit, $xsSize, $darkBlueFont);
+      transition: .25s ease;
+    }
+  
+    .inputField {
+      border: 0;
+      z-index: 1;
+      background-color: transparent;
+      border-bottom: 2px solid #eee;
+      @include font(inherit, $mdSize, $darkGrayFont);
+      padding: .80rem 0;
+
+      @include laptop {
+        font-size: $navFont;
+      }
+      
+      & * {
+        @include font(inherit, $xsSize, inherit);
+      }
+  
+      &:focus,
+      &:valid {
+        outline: 0;
+        border-bottom-color: $green;
+      }
+
+  
+    }
+      .inputField::placeholder, textarea::placeholder, input[type="date"]::-webkit-datetime-edit-text,
+      input[type="date"]::-webkit-datetime-edit-month-field,
+      input[type="date"]::-webkit-datetime-edit-day-field,
+      input[type="date"]::-webkit-datetime-edit-year-field, input[type=date]:invalid::-webkit-datetime-edit  {
+      @include font($sansSerif, $navFont, $grayFont);
+      font-weight: 600;    
+    }
+  
+      .actionBtn {
+        margin-top: 2rem;
+        margin-inline: auto;
+        position: relative;
+        @include font(inherit, $mdSize, $whiteFont);
+        padding: 1rem;
+        width: 50%;
+        font-weight: 500;
+        border-radius: 6px;
+        background-color: $orangeBg;
+        border: 0;
+    
+        &:focus {
+          outline: 0;
+        }
+      }
+    .terms {
+      padding: 1rem 1rem;
+      text-align: center;
+    
+      @include font(inherit, $footprintFont, #8597a3);
+  
+      a {
+        display: block;
+        color: #6658d3;
+        text-decoration: none;
+      }
+    }
+  }
+
+
+
