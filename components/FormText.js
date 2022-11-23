@@ -8,7 +8,7 @@ const FormText = () => {
   return (
     <div className={formTextStyles.cardHeading}>
       <div>
-        <h2>Let's talk, send us a message.</h2>
+        <h2>Let&apos;s talk, send us a message.</h2>
       </div>
 
       <div className={formTextStyles.footprint}>

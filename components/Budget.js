@@ -48,7 +48,7 @@ const Budget = ({ submitData }) => {
                   />
                   <div className={presupuestoStyles.cardHeading}>
                     <h2>
-                      Let's start
+                      Let&apos;s start
                       <small>Get your free budget</small>
                     </h2>
                   </div>
